@@ -1,0 +1,12 @@
+[Unit]
+Description=Obsidian Sync Service by Nehz (https://arturboyun.t.me)
+After=network.target
+
+[Service]
+User=nehz
+WorkingDirectory=/home/nehz/code/obsidian-sync
+ExecStart=/usr/bin/env bash -c '/home/nehz/code/obsidian-sync/venv/bin/python -m obsidian_sync'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
