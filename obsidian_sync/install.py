@@ -66,7 +66,7 @@ class Installer:
 
         print("[red bold]Current settings found:\n")
         print(f"[yellow]Obsidian Vault Path: {self.obsidian_vault_path}")
-        print(f"[yellow]GitHub Repo URL: {self.github_repo_url}\n")
+        print(f"[yellow]Git Repository URL: {self.github_repo_url}\n")
 
         print("[red bold]Would you like to change these settings? (y/N): ", end="")
         user_input = input() or "N"
@@ -96,7 +96,7 @@ class Installer:
             )
             self.start_interactive_shell()
 
-        print("[blue bold]Please enter the URL to your GitHub repository")
+        print("[blue bold]Please enter the URL to your Git Repository")
         print(
             "[blue bold]URL [green]with format: https://github.com/username/repo_name.git: ",
             end="",
@@ -107,7 +107,7 @@ class Installer:
         print("\n")
         print("[red bold]Please confirm your settings:\n")
         print(f"[yellow]Obsidian Vault Path: {self.obsidian_vault_path}")
-        print(f"[yellow]GitHub Repo URL: {self.github_repo_url}\n")
+        print(f"[yellow]Git Reporitory URL: {self.github_repo_url}\n")
         print("[blue bold]Is this correct? (Y/n): ", end="")
         user_input = input()
         if not user_input:

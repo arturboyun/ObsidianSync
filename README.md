@@ -21,7 +21,37 @@ This project provides a solution for syncing Obsidian notes through a Git reposi
 
 ## Installation
 
-**Coming soon...**
+1. Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/arturboyun/ObsidianSync.git
+```
+
+2. Create virtual environment and install dependencies:
+
+```bash
+cd ObsidianSync
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+3. Create a new Git repository on a hosting service such as GitHub, GitLab, or Bitbucket.
+4. Clone the repository to your local machine:
+
+```bash
+git clone https://your-repo-url.git
+```
+
+5. Run the following command to set your settings and install the systemd service:
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+6. Enter the path to your Obsidian vault and the URL of the Git repository.
+7. Well done! You are now ready to synchronize your Obsidian notes with the Git repository.
 
 ## Usage
 
