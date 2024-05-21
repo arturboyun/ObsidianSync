@@ -10,7 +10,7 @@ BOLD=$(tput bold)
 NORMAL=$(tput sgr0)
 
 # Install dependencies
-[ ! -f ./venv ] && python -m venv venv
+[ ! -f ./venv ] && python3 -m venv venv
 
 venv/bin/pip install -r requirements.txt
 clear
