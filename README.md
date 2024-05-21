@@ -30,7 +30,7 @@ git clone https://github.com/arturboyun/ObsidianSync.git
 3. Clone the repository to your local machine:
 
 ```bash
-git clone https://your-repo-url.git
+git clone https://your-repo-url.git $HOME/Obsidian/Vault
 ```
 
 3. Run the installation script:
