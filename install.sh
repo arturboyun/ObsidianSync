@@ -10,10 +10,16 @@ BOLD=$(tput bold)
 NORMAL=$(tput sgr0)
 
 # Install dependencies
-[ ! -f ./venv ] && python3 -m venv venv
+sudo add-apt-repository ppa:deadsnakes/ppa &&
+sudo apt update &&
+sudo apt install python3.12 &&
+sudo apt install python3.12-venv
 
-venv/bin/pip install -r requirements.txt
-clear
+# curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12 
+[ ! -f ./venv ] && python3.12 -m venv venv
+
+venv/bin/python -m pip install -r requirements.txt
+
 # Run the application
 venv/bin/python -m obsidian_sync.install
 

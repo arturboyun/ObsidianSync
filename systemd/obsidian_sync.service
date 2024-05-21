@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 User=nehz
-WorkingDirectory=/home/nehz/code/obsidian-sync
-ExecStart=/usr/bin/env bash -c '/home/nehz/code/obsidian-sync/venv/bin/python -m obsidian_sync'
+WorkingDirectory=/home/nehz/ObsidianSync
+ExecStart=/usr/bin/env bash -c '/home/nehz/ObsidianSync/venv/bin/python -m obsidian_sync'
 Restart=always
 
 [Install]

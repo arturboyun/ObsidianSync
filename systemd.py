@@ -1,4 +1,5 @@
 #! /usr/bin/env python3
+import getpass
 import os
 from pathlib import Path
 from rich import print
@@ -8,14 +9,15 @@ from obsidian_sync.config import settings
 
 def generate_service_file():
     # Get the current user and home directory
-    user = os.getlogin()
+    user = getpass.getuser()
+    
     home_dir = str(Path.home())
 
     # Define the project directory and script name
     script_name = "obsidian_sync"
 
     # Path to the Poetry environment file
-    env_python = f"{settings.ROOT_PATH / "venv" / "bin" / "python"}"
+    env_python = str(settings.ROOT_PATH / "venv" / "bin" / "python")
 
     # Content of the systemd service file
     service_content = (

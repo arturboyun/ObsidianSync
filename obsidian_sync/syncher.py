@@ -1,3 +1,4 @@
+from ast import main
 import datetime
 from pathlib import Path
 from rich import print
@@ -26,16 +27,24 @@ class Syncher:
 
         remote = repo.remote("origin")
 
+        main_branch = repo.active_branch
+        repo.active_branch.set_tracking_branch(remote.refs.main)
+
         print("[green bold]Pulling changes from remote repository...")
-        remote.pull()
+        try:
+            remote.pull()
 
-        print("[green bold]Adding changes to local repository...")
-        repo.git.add(all=True)
+            print("[green bold]Adding changes to local repository...")
+            repo.git.add(all=True)
 
-        print("[green bold]Committing changes...")
-        now = datetime.datetime.now()
-        repo.index.commit(f"Obsidian Sync - {now.strftime('%Y-%m-%d %H:%M:%S')}")
+            print("[green bold]Committing changes...")
+            now = datetime.datetime.now()
+            repo.index.commit(f"Obsidian Sync - {now.strftime('%Y-%m-%d %H:%M:%S')}")
 
-        print("[green bold]Pushing changes to remote repository...")
-        remote.push()
-        print("[green bold]Sync complete!")
+            print("[green bold]Pushing changes to remote repository...")
+            remote.push()
+            print("[green bold]Sync complete!")
+        except Exception as e:
+            print(f"[red bold]Error: {e}")
+            print("[red bold]Sync failed!")
+            return
