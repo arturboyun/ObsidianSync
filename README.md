@@ -47,8 +47,16 @@ chmod +x install.sh
 ## Usage
 
 1. Make changes to your Obsidian notes as usual.
-2. Use the provided CLI commands or the GUI interface to perform synchronization operations.
-3. Collaborate with others by pushing and pulling changes from the Git repository.
+2. Service in background will automatically synchronize your notes with the Git repository.
+
+## Update Settings
+
+Just run the installation script again:
+
+```bash
+cd ObsidianSync
+./install.sh
+```
 
 ## Contributing
 
