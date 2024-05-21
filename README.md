@@ -1,4 +1,4 @@
-# Obsidian Sync
+# Obsidian Sync [FOR FREE FOREVER]
 
 <!-- [![Build Status](https://img.shields.io/travis/your-username/your-repo.svg)](https://travis-ci.org/your-username/your-repo)
 [![Coverage](https://img.shields.io/codecov/c/github/your-username/your-repo.svg)](https://codecov.io/gh/your-username/your-repo)
