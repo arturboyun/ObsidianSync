@@ -1,4 +1,4 @@
-# Obsidian Sync [FOR FREE FOREVER]
+# Obsidian Sync
 
 [![Issues](https://img.shields.io/badge/issues-black?style=flat&logo=github)](https://github.com/arturboyun/ObsidianSync/issues)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
