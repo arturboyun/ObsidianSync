@@ -3,7 +3,7 @@
 <!-- [![Coverage](https://img.shields.io/codecov/c/github/your-username/your-repo.svg)](https://codecov.io/gh/your-username/your-repo)
 [![Dependencies](https://img.shields.io/david/your-username/your-repo.svg)](https://david-dm.org/your-username/your-repo)
 [![DevDependencies](https://img.shields.io/david/dev/your-username/your-repo.svg)](https://david-dm.org/your-username/your-repo?type=dev) -->
-![Github Issues](https://img.shields.io/badge/Version-0.1?style=flat&logo=github)
+[![Issues](https://img.shields.io/badge/Version-0.1?style=flat&logo=github)](https://github.com/arturboyun/ObsidianSync/issues)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
