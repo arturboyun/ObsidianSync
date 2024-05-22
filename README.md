@@ -28,8 +28,15 @@ git clone https://github.com/arturboyun/ObsidianSync.git
 ```bash
 git clone https://your-repo-url.git $HOME/Obsidian/Vault
 ```
+4. Checkout and set upstream branch
 
-3. Run the installation script:
+```bash
+cd $HOME/Obsidian/Vault
+git checkout -b <branch-name> --track <remote-name>/<branch-name>
+git branch --set-upstream-to=<remote-name>/<branch-name>
+```
+
+5. Run the installation script:
 
 ```bash
 cd ObsidianSync
@@ -37,8 +44,8 @@ chmod +x install.sh
 ./install.sh
 ```
 
-4. Enter the path to your Obsidian vault and the URL of the Git repository.
-5. Well done! You are now ready to synchronize your Obsidian notes with the Git repository.
+6. Enter the path to your Obsidian vault and the URL of the Git repository.
+7. Well done! You are now ready to synchronize your Obsidian notes with the Git repository.
 
 ## Usage
 
