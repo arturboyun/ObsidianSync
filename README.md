@@ -32,6 +32,7 @@ git clone https://your-repo-url.git $HOME/Obsidian/Vault
 
 ```bash
 cd $HOME/Obsidian/Vault
+git config pull.ff only
 git branch --set-upstream-to=origin/main main
 ```
 **!CHANGE `main` to your branch name!**
