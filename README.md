@@ -61,6 +61,28 @@ cd ObsidianSync
 ./install.sh
 ```
 
+## Systemd Service (Start / Restart / Stop / Logs)
+
+### Start 
+```bash
+sudo systemctl restart obsidian_sync.service
+```
+
+### Restart
+```bash
+sudo systemctl restart obsidian_sync.service
+```
+
+### Stop
+```bash
+sudo systemctl stop obsidian_sync.service
+```
+
+### Logs
+```bash
+sudo journalctl -u obsidian_sync
+```
+
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
