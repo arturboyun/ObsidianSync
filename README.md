@@ -32,9 +32,9 @@ git clone https://your-repo-url.git $HOME/Obsidian/Vault
 
 ```bash
 cd $HOME/Obsidian/Vault
-git checkout -b <branch-name> --track <remote-name>/<branch-name>
-git branch --set-upstream-to=<remote-name>/<branch-name>
+git branch --set-upstream-to=origin/main main
 ```
+**!CHANGE `main` to your branch name!**
 
 5. Run the installation script:
 
