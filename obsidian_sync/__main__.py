@@ -41,4 +41,6 @@ def on_shutdown():
 
 
 if __name__ == "__main__":
+    print(f"[green bold]Starting to watch {watcher.path}")
+    print("[yellow]Press Ctrl+C to exit", end="\n\n")
     watcher.start()

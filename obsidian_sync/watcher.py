@@ -6,6 +6,16 @@ from rich import print
 
 
 class Watcher:
+    ignore_dirs: list[str] = ["__pycache__", ".git", ".github", ".vscode", ".idea"]
+    ignore_files: list[str] = [
+        "__init__.py",
+        ".gitignore",
+        ".DS_Store",
+        ".gitattributes",
+        ".gitmodules",
+        ".gitkeep",
+    ]
+
     def __init__(self, path: Path, interval: int | None = 5):
         if path is None:
             raise ValueError("Path cannot be None")
@@ -45,9 +55,6 @@ class Watcher:
         self.on_shutdown_events.append(func)
 
     def start(self):
-        print(f"[green bold]Starting to watch {self.path}")
-        print("[yellow]Press Ctrl+C to exit", end="\n\n")
-
         for hook in self.on_startup_events:
             hook()
 
@@ -76,12 +83,17 @@ class Watcher:
         result = dict()
         for root, dirs, files in data:
             for file in files:
+                if file in self.ignore_files:
+                    continue
+
                 file_path = path / file
                 try:
                     result[file] = file_path.stat().st_mtime
                 except FileNotFoundError:
                     continue
             for dir in dirs:
+                if dir in self.ignore_dirs:
+                    continue
                 inner_result = self.get_last_modified_time(path / dir)
                 result.update(inner_result)
         return result
